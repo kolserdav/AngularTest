@@ -1,0 +1,7 @@
+<div [ngClass]="{form: true}" id="start">
+    <div [ngClass]="{formItem: true}">
+      <label for={{id}}>Search or write for any #tag</label>
+      <small>For help type #example</small>
+      <input id={{id}} (input)="handleChange($event)" (keypress)="handleKeyPress($event)" [ngClass]="{searchInput: true}" type="text">
+    </div>
+  </div>

@@ -1,0 +1,6 @@
+<div [ngClass]="{cards: true}" *ngFor="let message of messages.reverse()">
+    <div [ngClass]="{messageText: true}" *ngIf="message.tag && message.text">
+        <h1>{{ message.tag }}</h1>
+        <p>{{ message.text }}</p>
+    </div>
+</div>

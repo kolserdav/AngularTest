@@ -1,0 +1,125 @@
+@import '~@angular/material/theming';
+$my-theme-primary: mat-palette($mat-indigo, 700, 300, 900);
+$my-theme-accent: mat-palette($mat-light-blue);
+$my-theme-warn: mat-palette($mat-deep-orange, A200);
+
+$my-theme: mat-light-theme(
+    $my-theme-primary,
+    $my-theme-accent,
+    $my-theme-warn
+);
+
+$font: 'Ubuntu';
+
+.wrapper {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+app-toolbar {
+    position: fixed;
+    overflow: hidden;
+    margin: 0;
+    z-index: 12;
+    width: 100%;
+    height: 8vh;
+    background: mat-color($my-theme-primary);
+    color: mat-color($my-theme-accent);
+}
+
+app-input {
+    display: flex;
+    position: relative;
+    top: 9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+app-messages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 12vh;
+    height: 100vh;
+    margin-top: 20px;
+    @media(max-width: 760px) {
+        top: 23vh;
+    }
+}
+
+.toolbar {
+    overflow: hidden;
+    height: 100%;
+    padding-left: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menuItem {
+    cursor: pointer;
+    font-family: $font;
+    font-size: 1em;
+    margin-bottom: 2px;
+    @media(max-width: 760px) {
+        font-size: 0.5em;
+    }
+}
+
+.form {
+    width: 50%;
+    height: 2em;
+    @media(max-width: 760px) {
+        width: 80%;
+        height: 1em;
+    }
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+label {
+    margin: 3px;
+    font-family: 'Roboto';
+    color: mat-color($my-theme-accent);
+}
+
+.searchInput {
+    width: 100%;
+    height: 2em;
+    font-size: 1em;
+    @media(max-width: 760px) {
+        height: 1em;
+    }
+}
+
+.messageText {
+    position: relative;
+}
+
+.cards {
+    position: relative; 
+    width: 50%;
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+    padding: 12px;
+    @media(max-width: 760px) {
+        width: 80%;
+        padding: 5px;
+    }
+}
