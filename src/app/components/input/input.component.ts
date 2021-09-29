@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DatabaseService } from '../../services/database.service';
 import { NgRedux } from '@angular-redux/store';
 import { StorageService } from '../../services/storage.service';
@@ -132,7 +132,7 @@ export class InputComponent {
           this.oldValue = value;
         }
       })
-      .catch(e => console.error(e));
+      .catch(e => console.error('Error get tags', e));
     }
   }
     
